@@ -73,7 +73,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 2. 資料庫 (Unit 36: 18個單字 - 農耕與土地) ---
+# --- 2. 資料庫 (Unit 36: 18個單字 - User Fix) ---
 vocab_data = [
     {"amis": "Maomah", "chi": "耕作 / 做農活", "icon": "🚜", "source": "Row 676", "morph": "Ma-Omah"},
     {"amis": "Mipaloma", "chi": "種植", "icon": "🌱", "source": "Row 1293", "morph": "Mi-Paloma"},
@@ -81,8 +81,8 @@ vocab_data = [
     {"amis": "Lamelo", "chi": "雜草 (小米草)", "icon": "🌾", "source": "Row 481", "morph": "Noun"},
     {"amis": "Panay", "chi": "稻子 / 稻米", "icon": "🌾", "source": "Row 738", "morph": "Noun"},
     {"amis": "Hemay", "chi": "飯 / 米飯", "icon": "🍚", "source": "Row 210", "morph": "Noun"},
-    {"amis": "Epah", "chi": "酒", "icon": "🍶", "source": "Row 517", "morph": "Noun"},
-    {"amis": "Sota'", "chi": "泥土 / 土地", "icon": "🟤", "source": "Row 450", "morph": "Noun"},
+    {"amis": "^Epah", "chi": "酒", "icon": "🍶", "source": "User Fix", "morph": "Noun"}, # 修正
+    {"amis": "Sota'", "chi": "泥巴 / 泥團", "icon": "🟤", "source": "User Fix", "morph": "Noun"}, # 修正
     {"amis": "Kilang", "chi": "樹 / 木頭", "icon": "🌳", "source": "Row 259", "morph": "Noun"},
     {"amis": "Pakaen", "chi": "餵食 / 請吃", "icon": "🥣", "source": "Row 517", "morph": "Pa-Kaen"},
     {"amis": "Kalimelaan", "chi": "珍惜的 / 寶貴的", "icon": "💎", "source": "Row 490", "morph": "Ka-Limela-an"},
@@ -97,46 +97,46 @@ vocab_data = [
 
 # --- 句子庫 (9句: 嚴格源自 CSV 並移除連字號) ---
 sentences = [
-    {"amis": "Mangata to ko pikolasan to lamelo.", "chi": "除小米草的季節已經快到了。", "icon": "⏳", "source": "Row 481"},
+    {"amis": "Mangatato ko pikolasan to lamelo.", "chi": "除小米草的季節已經快到了。", "icon": "⏳", "source": "Row 481 (User Fix)"},
+    {"amis": "Pakaenhan to hemay, titi ato ^epah.", "chi": "請吃糯米糕、肉和酒。", "icon": "🍖", "source": "Row 517 (User Fix)"},
+    {"amis": "Mikilidong kita i la'eno no kilang.", "chi": "我們在樹下躲雨。", "icon": "🌳", "source": "Row 259 (User Fix)"},
     {"amis": "O kalimelaan no maomahay ko kolong.", "chi": "牛是農民所珍惜的。", "icon": "🐂", "source": "Row 490"},
-    {"amis": "Pakaenhan to hemay, titi ato epah.", "chi": "請吃糯米糕、肉和酒。", "icon": "🍖", "source": "Row 517"},
     {"amis": "Hato o sama' ato tatokem ato dongec.", "chi": "像是山萵苣、龍葵、還有藤心。", "icon": "🍲", "source": "Row 2472"},
     {"amis": "Mipaloma to panay.", "chi": "種植稻子。", "icon": "🌱", "source": "Standard Pattern"},
     {"amis": "Pina ko toki a maomah kami?", "chi": "我們幾點做農活？", "icon": "⏰", "source": "Row 676"},
-    {"amis": "Mikilidong kita i kala'eno no kilang.", "chi": "我們在樹下躲雨。", "icon": "🌳", "source": "Row 259"},
     {"amis": "Mipakaen to fafoy.", "chi": "餵豬。", "icon": "🐖", "source": "Standard Pattern"},
-    {"amis": "Adihay ko sota' i papotal.", "chi": "外面的泥土很多。", "icon": "🟤", "source": "Adapted from Row 450"},
+    {"amis": "Adihay ko sota' i papotal.", "chi": "外面的泥巴很多。", "icon": "🟤", "source": "Adapted from Row 450"},
 ]
 
 # --- 3. 隨機題庫 (5題) ---
 raw_quiz_pool = [
     {
-        "q": "Mangata to ko pikolasan to lamelo.",
-        "audio": "Mangata to ko pikolasan to lamelo",
+        "q": "Mangatato ko pikolasan to lamelo.",
+        "audio": "Mangatato ko pikolasan to lamelo",
         "options": ["除小米草的季節快到了", "收割稻子的季節快到了", "種植地瓜的季節快到了"],
         "ans": "除小米草的季節快到了",
-        "hint": "Kolas (除草), Lamelo (雜草) (Row 481)"
+        "hint": "Kolas (除草), Lamelo (雜草) (User Fix)"
     },
     {
-        "q": "O kalimelaan no maomahay ko kolong.",
-        "audio": "O kalimelaan no maomahay ko kolong",
-        "options": ["牛是農民所珍惜的", "牛是農民所害怕的", "牛是農民所買的"],
-        "ans": "牛是農民所珍惜的",
-        "hint": "Kalimelaan (珍惜的) (Row 490)"
+        "q": "Mikilidong kita i la'eno no kilang.",
+        "audio": "Mikilidong kita i la'eno no kilang",
+        "options": ["我們在樹下躲雨", "我們在樹上睡覺", "我們在樹旁吃飯"],
+        "ans": "我們在樹下躲雨",
+        "hint": "La'eno (下方) (User Fix)"
     },
     {
-        "q": "單字測驗：Hemay",
-        "audio": "Hemay",
-        "options": ["飯/米飯", "麵", "麵包"],
-        "ans": "飯/米飯",
-        "hint": "每天吃的主食"
+        "q": "單字測驗：^Epah",
+        "audio": "^Epah",
+        "options": ["酒", "水", "茶"],
+        "ans": "酒",
+        "hint": "Pakaenhan to ... ^epah"
     },
     {
-        "q": "單字測驗：Maomah",
-        "audio": "Maomah",
-        "options": ["耕作/做農活", "打獵", "捕魚"],
-        "ans": "耕作/做農活",
-        "hint": "在 Omah (田) 做事"
+        "q": "單字測驗：Sota'",
+        "audio": "Sota'",
+        "options": ["泥巴/泥團", "石頭", "沙子"],
+        "ans": "泥巴/泥團",
+        "hint": "User Fix: Sota'"
     },
     {
         "q": "單字測驗：Pakaen",
@@ -167,7 +167,7 @@ if 'init' not in st.session_state:
 
 # --- 5. 主介面 ---
 st.markdown("<h1 style='text-align: center; color: #F57F17;'>Unit 36: O Omah</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #666;'>農耕與土地 (Farming & Land)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #666;'>農耕與土地 (User Corrected)</p>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 詞彙與句型", "🎲 隨機挑戰"])
 
