@@ -141,8 +141,8 @@ raw_quiz_pool = [
     {
         "q": "單字測驗：Pakaen",
         "audio": "Pakaen",
-        "options": ["餵食/請吃", "去吃", "煮飯"],
-        "ans": "餵食/請吃",
+        "options": ["餵食", "去吃", "煮飯"],
+        "ans": "餵食",
         "hint": "Pa- (使/給) + Kaen (吃)"
     }
 ]
@@ -257,4 +257,5 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
 
