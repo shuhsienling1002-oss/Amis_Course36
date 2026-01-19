@@ -84,11 +84,11 @@ vocab_data = [
     {"amis": "^Epah", "chi": "酒", "icon": "🍶", "source": "User Fix", "morph": "Noun"}, # 修正
     {"amis": "Sota'", "chi": "泥巴 / 泥團", "icon": "🟤", "source": "User Fix", "morph": "Noun"}, # 修正
     {"amis": "Kilang", "chi": "樹 / 木頭", "icon": "🌳", "source": "Row 259", "morph": "Noun"},
-    {"amis": "Pakaen", "chi": "餵食 / 請吃", "icon": "🥣", "source": "Row 517", "morph": "Pa-Kaen"},
+    {"amis": "Pakaen", "chi": "餵食(詞根)", "icon": "🥣", "source": "Row 517", "morph": "Pa-Kaen"},
     {"amis": "Kalimelaan", "chi": "珍惜的 / 寶貴的", "icon": "💎", "source": "Row 490", "morph": "Ka-Limela-an"},
     {"amis": "Tatokem", "chi": "龍葵 (野菜)", "icon": "🥬", "source": "Row 2472", "morph": "Noun"},
     {"amis": "Sama'", "chi": "山萵苣 (野菜)", "icon": "🥗", "source": "Row 2472", "morph": "Noun"},
-    {"amis": "Mipakaen", "chi": "正在餵食", "icon": "🍼", "source": "Row 1205", "morph": "Mi-Pa-Kaen"},
+    {"amis": "Mipakaen", "chi": "餵食", "icon": "🍼", "source": "Row 1205", "morph": "Mi-Pa-Kaen"},
     {"amis": "Omah", "chi": "田地 (詞根)", "icon": "🏞️", "source": "Root", "morph": "Root"},
     {"amis": "Paloma", "chi": "種植 / 植物 (詞根)", "icon": "🪴", "source": "Root", "morph": "Root"},
     {"amis": "Kolas", "chi": "除草 (詞根)", "icon": "✂️", "source": "Root", "morph": "Root"},
@@ -257,3 +257,4 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
